@@ -1,10 +1,9 @@
 package main
 
 import (
+	"github.com/resk/infra"
 	"github.com/tietang/props/ini"
 	"github.com/tietang/props/kvs"
-	_ "imooc.com/resk"
-	"imooc.com/resk/infra"
 )
 
 func main() {
