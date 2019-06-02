@@ -7,4 +7,5 @@ import (
 
 func init() {
 	infra.Register(&base.PropsStarter{})
+	//infra.DemoRegister(&base.PropsStarter{})
 }

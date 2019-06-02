@@ -15,5 +15,5 @@ func main() {
 	fmt.Println(conf.GetDefault("app.name", "unknow"))
 	fmt.Println(conf.GetBoolDefault("app.enabled", false))
 	fmt.Println(conf.GetDurationDefault("app.time", time.Second))
-
+	fmt.Print(conf.Values)
 }

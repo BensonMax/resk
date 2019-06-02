@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "github.com/resk"
 	"github.com/resk/infra"
 	"github.com/tietang/props/ini"
 	"github.com/tietang/props/kvs"
