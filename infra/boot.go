@@ -10,12 +10,14 @@ type BootApplication struct {
 	starterContext StarterContext
 }
 
+//通过New方法获取 应用程序启动管理器
 func New(conf kvs.ConfigSource) *BootApplication {
 	b := &BootApplication{conf: conf, starterContext: StarterContext{}}
 	b.starterContext[KeyProps] = conf
 	return b
 }
 
+//应用启动方法
 func (b *BootApplication) Start() {
 	//1. 初始化starter
 	b.init()
@@ -25,6 +27,7 @@ func (b *BootApplication) Start() {
 	b.start()
 }
 
+//初始化方法
 func (b *BootApplication) init() {
 	for _, starter := range StarterRegister.AllStarters() {
 		starter.Init(b.starterContext)
@@ -35,6 +38,7 @@ func (b *BootApplication) setup() {
 		starter.Setup(b.starterContext)
 	}
 }
+
 func (b *BootApplication) start() {
 	for i, starter := range StarterRegister.AllStarters() {
 

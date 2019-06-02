@@ -2,8 +2,8 @@ package base
 
 import (
 	"fmt"
+	"github.com/resk/infra"
 	"github.com/tietang/props/kvs"
-	"imooc.com/resk/infra"
 )
 
 var props kvs.ConfigSource
