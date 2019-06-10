@@ -1,6 +1,8 @@
 package infra
 
-import "github.com/tietang/props/kvs"
+import (
+	"github.com/tietang/props/kvs"
+)
 
 const (
 	KeyProps = "_conf"
